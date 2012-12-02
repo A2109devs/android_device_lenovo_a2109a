@@ -1,12 +1,12 @@
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/asus/grouper/device.mk)
+$(call inherit-product, device/lenovo/a2109a/device.mk)
 
 # This is where we'd set a backup provider if we had one
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-LOCAL_PATH := device/Lenovo/a2109a
+LOCAL_PATH := device/lenovo/a2109a
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else

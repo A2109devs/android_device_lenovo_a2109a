@@ -9,7 +9,7 @@ TARGET_SCREEN_WIDTH := 800
 $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/Lenovo/A2109A/full_A2109A.mk)
+$(call inherit-product, device/lenovo/a2109a/full_A2109A.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := full_a2109a
