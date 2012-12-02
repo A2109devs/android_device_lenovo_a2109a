@@ -12,10 +12,11 @@ $(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
 $(call inherit-product, device/lenovo/a2109a/full_A2109A.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := full_a2109a
 PRODUCT_DEVICE := a2109a
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := Full Android on A2109A
+PRODUCT_NAME := cm_a2109a
+PRODUCT_BRAND := Lenovo
+PRODUCT_MODEL := A2109A
+PRODUCT_MANUFACTURER := Lenovo
 
 # Don't restrict vendor folder
 PRODUCT_RESTRICT_VENDOR_FILES := false
