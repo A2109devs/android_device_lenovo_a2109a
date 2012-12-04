@@ -295,8 +295,8 @@ LOCAL_MODULE_OWNER := broadcom
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := gps.tegra3
-LOCAL_SRC_FILES := gps.tegra3.so
+LOCAL_MODULE := gps.tegra
+LOCAL_SRC_FILES := gps.tegra.so
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := \$(TARGET_OUT_SHARED_LIBRARIES)/hw
@@ -329,7 +329,7 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 # Broadcom blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
     glgps \\
-    gps.tegra3 \\
+    gps.tegra \\
     gpsconfig \\
     bcm4330
 EOF
@@ -381,8 +381,8 @@ LOCAL_PATH := \$(call my-dir)
 ifeq (\$(TARGET_DEVICE),a2109a)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := gralloc.tegra3
-LOCAL_SRC_FILES := gralloc.tegra3.so
+LOCAL_MODULE := gralloc.tegra
+LOCAL_SRC_FILES := gralloc.tegra.so
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib/hw
@@ -391,8 +391,8 @@ LOCAL_MODULE_OWNER := nvidia
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := hwcomposer.tegra3
-LOCAL_SRC_FILES := hwcomposer.tegra3.so
+LOCAL_MODULE := hwcomposer.tegra
+LOCAL_SRC_FILES := hwcomposer.tegra.so
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib/hw
@@ -520,15 +520,15 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := nvidia
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libnvdispmgr_d
-LOCAL_SRC_FILES := libnvdispmgr_d.so
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := nvidia
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libnvdispmgr_d
+#LOCAL_SRC_FILES := libnvdispmgr_d.so
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := nvidia
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libnvmm
@@ -640,15 +640,15 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := nvidia
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libnvmm_misc
-LOCAL_SRC_FILES := libnvmm_misc.so
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := nvidia
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libnvmm_misc
+#LOCAL_SRC_FILES := libnvmm_misc.so
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := nvidia
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libnvmm_parser
@@ -870,15 +870,15 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := nvidia
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := nvavp_os_00001000
-LOCAL_SRC_FILES := nvavp_os_00001000.bin
-LOCAL_MODULE_SUFFIX := .bin
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/etc/firmware
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := nvidia
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := nvavp_os_00001000
+#LOCAL_SRC_FILES := nvavp_os_00001000.bin
+#LOCAL_MODULE_SUFFIX := .bin
+#LOCAL_MODULE_CLASS := ETC
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/etc/firmware
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := nvidia
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := nvavp_os_0ff00000
@@ -890,15 +890,15 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := nvidia
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := nvavp_os_e0000000
-LOCAL_SRC_FILES := nvavp_os_e0000000.bin
-LOCAL_MODULE_SUFFIX := .bin
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/etc/firmware
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := nvidia
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := nvavp_os_e0000000
+#LOCAL_SRC_FILES := nvavp_os_e0000000.bin
+#LOCAL_MODULE_SUFFIX := .bin
+#LOCAL_MODULE_CLASS := ETC
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/etc/firmware
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := nvidia
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := nvavp_os_eff00000
@@ -931,8 +931,8 @@ LOCAL_MODULE_OWNER := nvidia
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := nvram
-LOCAL_SRC_FILES := nvram.txt
+LOCAL_MODULE := nvram_4330
+LOCAL_SRC_FILES := nvram_4330.txt
 LOCAL_MODULE_SUFFIX := .txt
 LOCAL_MODULE_CLASS := ETC
 LOCAL_MODULE_PATH := \$(TARGET_OUT_ETC)
@@ -964,18 +964,16 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 
 # NVIDIA blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
-    nvavp_os_00001000 \\
     nvavp_os_0ff00000 \\
-    nvavp_os_e0000000 \\
     nvavp_os_eff00000 \\
     nvavp_vid_ucode_alt \\
     nvcamera \\
-    nvram \\
+    nvram_4330 \\
     libEGL_tegra \\
     libGLESv1_CM_tegra \\
     libGLESv2_tegra \\
-    gralloc.tegra3 \\
-    hwcomposer.tegra3 \\
+    gralloc.tegra \\
+    hwcomposer.tegra \\
     libardrv_dynamic \\
     libcgdrv \\
     libnvapputil \\
@@ -991,7 +989,7 @@ PRODUCT_PACKAGES := \\
     libnvmm_contentpipe \\
     libnvmm_image \\
     libnvmm_manager \\
-    libnvmm_misc \\
+#    libnvmm_misc \\
     libnvmm_parser \\
     libnvmm_service \\
     libnvmm_utils \\
@@ -1071,15 +1069,15 @@ LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(TARGET_DEVICE),a2109a)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libdrmdecrypt
-LOCAL_SRC_FILES := libdrmdecrypt.so
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := widevine
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libdrmdecrypt
+#LOCAL_SRC_FILES := libdrmdecrypt.so
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := widevine
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libwvdrm_L1
@@ -1125,7 +1123,7 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 
 # Widevine blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
-    libdrmdecrypt \\
+#    libdrmdecrypt \\
     libwvdrm_L1 \\
     libWVStreamControlAPI_L1
 EOF
@@ -1186,25 +1184,25 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_OWNER := invensense
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libmllite
-LOCAL_SRC_FILES := libmllite.so
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := invensense
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libmllite
+#LOCAL_SRC_FILES := libmllite.so
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := invensense
+#include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libmplmpu
-LOCAL_SRC_FILES := libmplmpu.so
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := invensense
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libmplmpu
+#LOCAL_SRC_FILES := libmplmpu.so
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := invensense
+#include \$(BUILD_PREBUILT)
 
 endif
 EOF
@@ -1231,8 +1229,8 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 # Invensense blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
     libinvensense_hal \\
-    libmllite \\
-    libmplmpu
+#    libmllite \\
+#    libmplmpu
 EOF
 
 MAKEFILE=../../../$OUTDIR/BoardConfigPartial.mk
@@ -1280,15 +1278,15 @@ LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(TARGET_DEVICE),a2109a)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := touch_fw
-LOCAL_SRC_FILES := touch_fw.ekt
-LOCAL_MODULE_SUFFIX := .ekt
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := \$(TARGET_OUT_ETC)/firmware
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := elan
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := touch_fw
+#LOCAL_SRC_FILES := touch_fw.ekt
+#LOCAL_MODULE_SUFFIX := .ekt
+#LOCAL_MODULE_CLASS := ETC
+#LOCAL_MODULE_PATH := \$(TARGET_OUT_ETC)/firmware
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := elan
+#include \$(BUILD_PREBUILT)
 
 endif
 EOF
@@ -1314,7 +1312,7 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 
 # Elan blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
-    touch_fw
+#    touch_fw
 EOF
 
 MAKEFILE=../../../$OUTDIR/BoardConfigPartial.mk
@@ -1362,15 +1360,15 @@ LOCAL_PATH := \$(call my-dir)
 
 ifeq (\$(TARGET_DEVICE),a2109a)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libpn544_fw
-LOCAL_SRC_FILES := libpn544_fw.so
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR)/firmware
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_OWNER := nxp
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libpn544_fw
+#LOCAL_SRC_FILES := libpn544_fw.so
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR)/firmware
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_OWNER := nxp
+#include \$(BUILD_PREBUILT)
 
 endif
 EOF
@@ -1396,7 +1394,7 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 
 # NXP blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
-    libpn544_fw
+#    libpn544_fw
 EOF
 
 MAKEFILE=../../../$OUTDIR/BoardConfigPartial.mk
@@ -1427,12 +1425,12 @@ ASUSDIR=../../../$OUTVENDOR/$MANUFACTURER/$DEVICE/proprietary
 TARGET=../../../$OUTVENDOR/broadcom/$DEVICE/proprietary
 mv $ASUSDIR/bcm4330.hcd $TARGET
 mv $ASUSDIR/glgps $TARGET
-mv $ASUSDIR/gps.tegra3.so $TARGET
+mv $ASUSDIR/gps.tegra.so $TARGET
 mv $ASUSDIR/gpsconfig.xml $TARGET
 # NVIDIA
 TARGET=../../../$OUTVENDOR/nvidia/$DEVICE/proprietary
-mv $ASUSDIR/gralloc.tegra3.so $TARGET
-mv $ASUSDIR/hwcomposer.tegra3.so $TARGET
+mv $ASUSDIR/gralloc.tegra.so $TARGET
+mv $ASUSDIR/hwcomposer.tegra.so $TARGET
 mv $ASUSDIR/libEGL_tegra.so $TARGET
 mv $ASUSDIR/libGLESv1_CM_tegra.so $TARGET
 mv $ASUSDIR/libGLESv2_tegra.so $TARGET
@@ -1445,14 +1443,14 @@ mv $ASUSDIR/libnvavp.so $TARGET
 mv $ASUSDIR/libnvcamerahdr.so $TARGET
 mv $ASUSDIR/libnvddk_2d.so $TARGET
 mv $ASUSDIR/libnvddk_2d_v2.so $TARGET
-mv $ASUSDIR/libnvdispmgr_d.so $TARGET
+#mv $ASUSDIR/libnvdispmgr_d.so $TARGET
 mv $ASUSDIR/libnvmm.so $TARGET
 mv $ASUSDIR/libnvmm_audio.so $TARGET
 mv $ASUSDIR/libnvmm_camera.so $TARGET
 mv $ASUSDIR/libnvmm_contentpipe.so $TARGET
 mv $ASUSDIR/libnvmm_image.so $TARGET
 mv $ASUSDIR/libnvmm_manager.so $TARGET
-mv $ASUSDIR/libnvmm_misc.so $TARGET
+#mv $ASUSDIR/libnvmm_misc.so $TARGET
 mv $ASUSDIR/libnvmm_parser.so $TARGET
 mv $ASUSDIR/libnvmm_service.so $TARGET
 mv $ASUSDIR/libnvmm_utils.so $TARGET
@@ -1480,26 +1478,24 @@ mv $ASUSDIR/libnvwinsys.so $TARGET
 mv $ASUSDIR/libnvwsi.so $TARGET
 mv $ASUSDIR/libstagefrighthw.so $TARGET
 mv $ASUSDIR/libtf_crypto_sst.so $TARGET
-mv $ASUSDIR/nvavp_os_00001000.bin $TARGET
 mv $ASUSDIR/nvavp_os_0ff00000.bin $TARGET
-mv $ASUSDIR/nvavp_os_e0000000.bin $TARGET
 mv $ASUSDIR/nvavp_os_eff00000.bin $TARGET
 mv $ASUSDIR/nvavp_vid_ucode_alt.bin $TARGET
 mv $ASUSDIR/nvcamera.conf $TARGET
-mv $ASUSDIR/nvram.txt $TARGET
+mv $ASUSDIR/nvram_4330.txt $TARGET
 # WIDEVINE
 TARGET=../../../$OUTVENDOR/widevine/$DEVICE/proprietary
 mv $ASUSDIR/libWVStreamControlAPI_L1.so $TARGET
-mv $ASUSDIR/libdrmdecrypt.so $TARGET
+#mv $ASUSDIR/libdrmdecrypt.so $TARGET
 mv $ASUSDIR/libwvdrm_L1.so $TARGET
 #INVENSENSE
 TARGET=../../../$OUTVENDOR/invensense/$DEVICE/proprietary
 mv $ASUSDIR/libinvensense_hal.so $TARGET
-mv $ASUSDIR/libmllite.so $TARGET
-mv $ASUSDIR/libmplmpu.so $TARGET
+#mv $ASUSDIR/libmllite.so $TARGET
+#mv $ASUSDIR/libmplmpu.so $TARGET
 #ELAN
 TARGET=../../../$OUTVENDOR/elan/$DEVICE/proprietary
-mv $ASUSDIR/touch_fw.ekt $TARGET
+#mv $ASUSDIR/touch_fw.ekt $TARGET
 #NXP
 TARGET=../../../$OUTVENDOR/nxp/$DEVICE/proprietary
-mv $ASUSDIR/libpn544_fw.so $TARGET
+#mv $ASUSDIR/libpn544_fw.so $TARGET

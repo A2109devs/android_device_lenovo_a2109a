@@ -6,15 +6,16 @@ $(call inherit-product, device/lenovo/a2109a/device.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-LOCAL_PATH := device/lenovo/a2109a
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+### Necessary?
+#LOCAL_PATH := device/lenovo/a2109a
+#ifeq ($(TARGET_PREBUILT_KERNEL),)
+#	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+#else
+#	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+#endif
+#
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_KERNEL):kernel
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_a2109a
