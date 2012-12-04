@@ -114,14 +114,14 @@ MAKEFILE=../../../$OUTDIR/device-partial.mk
 # Asus blob(s) necessary for Grouper hardware
 PRODUCT_PACKAGES := \\
     asound \\
-    btmacreader \\
-    camera.tegra3 \\
+    camera.tegra \\
     libdrmwvmplugin \\
-    libsensors.lightsensor \\
     libwvm \\
     sensors.kai \\
-    sensors-config \\
     tf_daemon
+#    btmacreader \\
+#    sensors-config \\
+#    libsensors.lightsensor \\
 EOF
 
 
@@ -168,9 +168,9 @@ LOCAL_MODULE_PATH := \$(TARGET_OUT)/bin
 include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
-LOCAL_MODULE := camera.tegra3
+LOCAL_MODULE := camera.tegra
 LOCAL_MODULE_OWNER := nvidia
-LOCAL_SRC_FILES := camera.tegra3.so
+LOCAL_SRC_FILES := camera.tegra.so
 LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_SUFFIX := .so
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
@@ -187,15 +187,15 @@ LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_PATH := \$(TARGET_OUT_VENDOR)/lib/drm
 include \$(BUILD_PREBUILT)
 
-include \$(CLEAR_VARS)
-LOCAL_MODULE := libsensors.lightsensor   
-LOCAL_MODULE_OWNER := lenovo
-LOCAL_SRC_FILES := libsensors.lightsensor.so
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_SUFFIX := .so
-LOCAL_MODULE_CLASS := SHARED_LIBRARIES
-LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
-include \$(BUILD_PREBUILT)
+#include \$(CLEAR_VARS)
+#LOCAL_MODULE := libsensors.lightsensor   
+#LOCAL_MODULE_OWNER := lenovo
+#LOCAL_SRC_FILES := libsensors.lightsensor.so
+#LOCAL_MODULE_TAGS := optional
+#LOCAL_MODULE_SUFFIX := .so
+#LOCAL_MODULE_CLASS := SHARED_LIBRARIES
+#LOCAL_MODULE_PATH := \$(TARGET_OUT)/lib
+#include \$(BUILD_PREBUILT)
 
 include \$(CLEAR_VARS)
 LOCAL_MODULE := libwvm   
@@ -989,7 +989,6 @@ PRODUCT_PACKAGES := \\
     libnvmm_contentpipe \\
     libnvmm_image \\
     libnvmm_manager \\
-#    libnvmm_misc \\
     libnvmm_parser \\
     libnvmm_service \\
     libnvmm_utils \\
@@ -1018,6 +1017,7 @@ PRODUCT_PACKAGES := \\
     libnvwsi \\
     libstagefrighthw \\
     libtf_crypto_sst
+#    libnvmm_misc \\
 EOF
 
 #-------------------------------------------------------------------------
