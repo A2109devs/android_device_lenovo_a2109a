@@ -17,7 +17,7 @@
 PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
-DEVICE_PACKAGE_OVERLAYS := \
+#DEVICE_PACKAGE_OVERLAYS := \
     device/asus/grouper/overlay
 
 PRODUCT_PROPERTY_OVERRIDES := \

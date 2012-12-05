@@ -1,8 +1,8 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/Lenovo/A2109A/BoardConfigVendor.mk
-include device/asus/grouper/BoardConfigCommon.mk
+-include vendor/lenovo/a2109a/BoardConfigVendor.mk
+include device/lenovo/a2109a/BoardConfigCommon.mk
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := unknown
@@ -20,7 +20,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 #BOARD_USERDATAIMAGE_PARTITION_SIZE := 0x105c0000
 #BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/Lenovo/A2109A/kernel
+TARGET_PREBUILT_KERNEL := device/lenovo/a2109a/kernel
 
 # Use this flag if the board has a ext4 partition larger than 2gb
 BOARD_HAS_LARGE_FILESYSTEM := true
