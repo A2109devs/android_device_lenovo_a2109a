@@ -54,7 +54,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 #WIFI_DRIVER_FW_PATH_P2P     := "/vendor/firmware/fw_bcmdhd_p2p.bin"
 
 TARGET_BOOTLOADER_BOARD_NAME := a2109a
-TARGET_BOARD_INFO_FILE := device/lenovo/a2109a/board-info.txt
+#TARGET_BOARD_INFO_FILE := device/lenovo/a2109a/board-info.txt
 
 TARGET_NO_BOOTLOADER := true
 
