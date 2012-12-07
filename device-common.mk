@@ -33,6 +33,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 include frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk
 
+PRODUCT_COPY_FILES += \
+    device/lenovo/a2109a/init.a2109a.rc:root/init.a2109a.rc \
+    device/lenovo/a2109a/init.tf.rc:root/init.tf.rc \
+    device/lenovo/a2109a/init.IdeaTabA2109A_board.usb.rc:root/init.IdeaTabA2109A_board.usb.rc
+
 #PRODUCT_COPY_FILES += \
     device/asus/grouper/init.grouper.rc:root/init.grouper.rc \
     device/asus/grouper/fstab.grouper:root/fstab.grouper \
