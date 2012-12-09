@@ -70,6 +70,9 @@ PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 endif
 
+PRODUCT_COPY_FILES += \
+    device/lenovo/a2109a/ft5x0x_ts.idc:system/usr/idc/ft5x0x_ts.idc
+
 #PRODUCT_COPY_FILES += \
     device/asus/grouper/vold.fstab:system/etc/vold.fstab \
     device/asus/grouper/elan-touchscreen.idc:system/usr/idc/elan-touchscreen.idc \
