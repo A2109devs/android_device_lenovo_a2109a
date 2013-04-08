@@ -1,0 +1,3 @@
+### Sys props
+ro.carrier=wifi-only
+ro.sf.lcd_density=160
