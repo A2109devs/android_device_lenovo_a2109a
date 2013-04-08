@@ -1,1 +1,1 @@
-device_tree cm10.1 for Lenovo A2109A
+device_tree cm10.2 for Lenovo IdeaTab A2109A
